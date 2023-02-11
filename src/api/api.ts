@@ -53,11 +53,12 @@ export async function fetchNetworkDetails(networkId: string): Promise<NetworkDet
 }
 
 function getStationFromResponseStation(responseStation: ResponseStation): Station {
-  const { id, name, empty_slots, free_bikes } = responseStation
+  const { id, name, empty_slots, free_bikes, timestamp } = responseStation
   return {
     id,
     name,
     emptySlots: empty_slots,
     freeBikes: free_bikes,
+    timestamp,
   }
 }

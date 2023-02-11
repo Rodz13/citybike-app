@@ -8,6 +8,7 @@ export type Station = {
   name: string
   emptySlots: number
   freeBikes: number
+  timestamp?: string
 }
 
 export type NetworkPreview = {

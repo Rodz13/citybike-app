@@ -1,4 +1,5 @@
 import { Card, List, ListItem, ListItemText, Typography } from '@mui/material'
+import NetworksDetailedInfo from './networks-info'
 import { Station } from '../types'
 
 interface StationsListProps {
@@ -11,7 +12,15 @@ const StationsList = ({ stations }: StationsListProps) => (
       <List>
         {stations.map((station) => (
           <ListItem key={station.id}>
-            <ListItemText primary={station.name} />
+            <ListItemText 
+              primary={station.name} 
+              secondary={
+                <NetworksDetailedInfo
+                  freeBikes={station.freeBikes}
+                  emptySlots={station.emptySlots}
+                  timestamp={station.timestamp!} />
+              }
+            />
           </ListItem>
         ))}
       </List>
