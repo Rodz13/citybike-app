@@ -22,3 +22,5 @@ export type NetworkDetails = {
   location: NetworkLocation
   stations: Station[]
 }
+
+export type FilterBy = 'free_bikes' | 'empty_slots' | null
