@@ -6,8 +6,6 @@ import { useNetworksList } from '../api/hooks'
 const NetworksListView = () => {
   const networks = useNetworksList()
 
-  console.log('net list', networks)
-
   return (
     <Container maxWidth='md'>
       <Header

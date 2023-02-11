@@ -8,13 +8,14 @@ interface ResponseStation {
   name: string,
   empty_slots: number
   free_bikes: number
+  timestamp: string
 }
 
 export async function fetchNetworksList(): Promise<NetworkPreview[] | false> {
   try {
     const response = await axios.get(`${BASE_URL}/networks`, {
       params: {
-        fields: 'id,name',
+        fields: 'id,name,location',
       },
     })
     const networksList = response.data?.networks

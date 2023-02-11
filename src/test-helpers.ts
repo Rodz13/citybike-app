@@ -3,13 +3,13 @@ import { NetworkDetails, NetworkPreview } from './types'
 /** Should be compatible with getDummyNetworksList */
 export const getDummyNetworksListApiResponse = () => ({
   networks: [
-    { id: 'velib', name: 'Vélib' },
+    { id: 'velib', name: 'Vélib', location: { city: 'Paris', country: 'FR' } },
   ],
 })
 
 /** Should be compatible with getDummyNetworksListApiResponse */
 export const getDummyNetworksList = (): NetworkPreview[] => [
-  { id: 'velib', name: 'Vélib' },
+  { id: 'velib', name: 'Vélib', location: { city: 'Paris', country: 'FR' } },
 ]
 
 /** Should be compatible with getDummyNetworkDetails */

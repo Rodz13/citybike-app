@@ -13,6 +13,7 @@ export type Station = {
 export type NetworkPreview = {
   id: string
   name: string
+  location?: NetworkLocation
 }
 
 export type NetworkDetails = {

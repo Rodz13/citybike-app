@@ -4,8 +4,8 @@ import { NetworkPreview } from '../types'
 import NetworksList from './networks-list'
 
 const networks: NetworkPreview[] = [
-  { id: '1', name: 'Velobike' },
-  { id: '2', name: 'Bysykkel' },
+  { id: '1', name: 'Velobike', location: { city: 'Moscow', country: 'RU'} },
+  { id: '2', name: 'Bysykkel', location: { city: 'Bærum', country: 'NO'} },
 ]
 
 describe('NetworksList', () => {
