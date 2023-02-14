@@ -4,13 +4,14 @@ import { FilterBy } from '../types'
 interface FilterProps {
     filterBy: FilterBy | undefined
     onFilterChange: (value: FilterBy) => void
+    numberOfStations: number
 }
 
-const Filter = ({ filterBy, onFilterChange }: FilterProps) => {
+const Filter = ({ filterBy, onFilterChange, numberOfStations }: FilterProps) => {
 
   return (
     <div>
-      <h2>Stations</h2>
+      <h2>Stations: {numberOfStations}</h2>
       <div>
         <Button
           variant={filterBy === 'empty_slots' ? 'contained' : 'outlined'}

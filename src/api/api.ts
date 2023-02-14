@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { NetworkDetails, NetworkPreview, Station } from '../types'
 
-const BASE_URL = 'http://api.citybik.es/v2'
+const BASE_URL = 'https://api.citybik.es/v2'
 
 interface ResponseStation {
   id: string,

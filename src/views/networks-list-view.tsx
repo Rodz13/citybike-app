@@ -7,7 +7,7 @@ const NetworksListView = () => {
   const networks = useNetworksList()
 
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='md' data-testid='network-list-view'>
       <Header
         primary
         title='City Bike Networks'

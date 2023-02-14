@@ -20,8 +20,10 @@ describe('NetworkDetailsView', () => {
 
     render(<NetworkDetailsView />)
 
-    expect(screen.getByRole('banner')).toBeInTheDocument()
-    expect(screen.getByRole('list')).toBeInTheDocument()
+    expect(screen.getByText('Vélib')).toBeInTheDocument()
+    expect(screen.getByText('Stations: 1')).toBeInTheDocument()
+    expect(screen.getByText('Show Empty Slots')).toBeInTheDocument()
+    expect(screen.getByText('Show Free Bikes')).toBeInTheDocument()
     expect(spyOnUseNetworkDetails).toHaveBeenCalled()
   })
 

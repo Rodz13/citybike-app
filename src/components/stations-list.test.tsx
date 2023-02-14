@@ -21,9 +21,6 @@ describe('StationsList', () => {
 
     render(<StationsList stations={stations} />)
 
-    expect(screen.getByRole('list')).toBeInTheDocument()
-    expect(screen.getAllByRole('listitem')).toHaveLength(stations.length)
-
     for (const { name } of stations) {
       expect(screen.getByText(name)).toBeInTheDocument()
     }

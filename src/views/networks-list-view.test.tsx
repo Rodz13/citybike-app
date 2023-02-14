@@ -18,8 +18,8 @@ describe('NetworksListView', () => {
       </BrowserRouter>
     )
 
-    expect(screen.getByRole('banner')).toBeInTheDocument()
-    expect(screen.getByRole('list')).toBeInTheDocument()
+    expect(screen.getByTestId('network-list-view')).toBeInTheDocument()
+    expect(screen.getByText('Vélib')).toBeInTheDocument()
     expect(spyOnUseNetworksList).toHaveBeenCalled()
   })
 })

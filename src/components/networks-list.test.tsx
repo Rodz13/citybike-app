@@ -16,7 +16,7 @@ describe('NetworksList', () => {
       </BrowserRouter>
     )
 
-    expect(screen.getByRole('list')).toBeInTheDocument()
+    expect(screen.getByTestId('network-list')).toBeInTheDocument()
     expect(screen.getAllByRole('listitem')).toHaveLength(networks.length)
   })
 

@@ -31,7 +31,7 @@ const NetworkDetails = ({ networkId }: NetworkDetailsProps) => {
   return network && (
     <>
       <Header title={network?.name} />
-      <Filter filterBy={filterBy} onFilterChange={handleFilterChange}/>
+      <Filter filterBy={filterBy} onFilterChange={handleFilterChange} numberOfStations={filteredStations.length}/>
       <StationsList stations={filteredStations} />
     </>
   )

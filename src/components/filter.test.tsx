@@ -8,10 +8,12 @@ describe('Filter', () => {
       <Filter
         filterBy={undefined}
         onFilterChange={jest.fn()}
+        numberOfStations={2}
       />
     )
 
     expect(screen.getByText('Show Empty Slots')).toBeInTheDocument()
     expect(screen.getByText('Show Free Bikes')).toBeInTheDocument()
+    expect(screen.getByText('Stations: 2')).toBeInTheDocument()
   })
 })
